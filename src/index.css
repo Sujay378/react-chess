@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto Slab', sans-serif;
+  line-height: 1.5;
+
+  color: #ebe7ef;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: radial-gradient(circle at top,
+      rgba(241, 210, 70, 0.98),
+      rgba(250, 176, 103, 0.87)),
+    url('bg-pattern-dark.png');
+  background-repeat: repeat;
+  background-size: 100% 100%, 30% 30%, 100% 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player {
+  height: 8vh;
+  width: 84vh;
+  background-color: rgba(22, 22, 22, 0.7);
+  display: flex;
+  align-items: center;
+  gap: 10px
+}
+
+.image-container {
+  background-color: white;
+  padding: 0 8px;
+  margin-left: 5px;
+}
+
+
+.board {
+  width: 84vh;
+  height: 84vh;
+  margin: auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap-reverse;
+}
+
+.board .square {
+  width: calc(84vh/8);
+  height: calc(84vh/8);
+  list-style: none;
+}
+
+.square button {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.square .white-back {
+  background-color: white;
+}
+
+.square .black-back {
+  background-color: grey;
+}
+
+.square button img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.active-square {
+  background-color: aquamarine !important;
+  border: 2px solid rgb(137, 137, 242) !important;
+}
